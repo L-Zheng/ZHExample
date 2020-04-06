@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "EventResponseController.h"
+#import "BlockController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *tableView;
@@ -33,7 +35,13 @@
         @{
             @"title" : @"事件传递、响应链条",
             @"block" : ^UIViewController *{
-                return [[UIViewController alloc] init];
+                return [[EventResponseController alloc] init];
+            }
+        },
+        @{
+            @"title" : @"Block",
+            @"block" : ^UIViewController *{
+                return [[BlockController alloc] init];
             }
         }
     ];
