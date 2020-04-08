@@ -24,6 +24,7 @@
 		0FBE4A4F243BF3E2006C1B08 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A4E243BF3E2006C1B08 /* KVOController.m */; };
 		0FBE4A52243BF3F5006C1B08 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A51243BF3F5006C1B08 /* NotificationController.m */; };
 		0FBE4A55243BF410006C1B08 /* DelegateM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A54243BF410006C1B08 /* DelegateM.m */; };
+		85365FCC243DBD35001FE9CB /* MultiParamsFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 85365FCB243DBD35001FE9CB /* MultiParamsFunc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		0FBE4A51243BF3F5006C1B08 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		0FBE4A53243BF410006C1B08 /* DelegateM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateM.h; sourceTree = "<group>"; };
 		0FBE4A54243BF410006C1B08 /* DelegateM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateM.m; sourceTree = "<group>"; };
+		85365FCA243DBD35001FE9CB /* MultiParamsFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiParamsFunc.h; sourceTree = "<group>"; };
+		85365FCB243DBD35001FE9CB /* MultiParamsFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiParamsFunc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,7 @@
 				0FBE4A0124383108006C1B08 /* SceneDelegate.m */,
 				0FBE4A0324383108006C1B08 /* ViewController.h */,
 				0FBE4A0424383108006C1B08 /* ViewController.m */,
+				85365FC9243DBD17001FE9CB /* MultiParamsFunc */,
 				0FBE4A322438350E006C1B08 /* Event&Reponse-Chain */,
 				0FBE4A3C2439733E006C1B08 /* Categoty&Extension */,
 				0FBE4A47243BF394006C1B08 /* Delegate */,
@@ -223,6 +227,15 @@
 				0FBE4A4E243BF3E2006C1B08 /* KVOController.m */,
 			);
 			path = KVO;
+			sourceTree = "<group>";
+		};
+		85365FC9243DBD17001FE9CB /* MultiParamsFunc */ = {
+			isa = PBXGroup;
+			children = (
+				85365FCA243DBD35001FE9CB /* MultiParamsFunc.h */,
+				85365FCB243DBD35001FE9CB /* MultiParamsFunc.m */,
+			);
+			path = MultiParamsFunc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +370,7 @@
 			files = (
 				0FBE4A0524383108006C1B08 /* ViewController.m in Sources */,
 				0FBE4A43243A0E57006C1B08 /* BlockM.m in Sources */,
+				85365FCC243DBD35001FE9CB /* MultiParamsFunc.m in Sources */,
 				0FBE4A4F243BF3E2006C1B08 /* KVOController.m in Sources */,
 				0FBE4A3824387B13006C1B08 /* EventResponseController.m in Sources */,
 				0FBE4A4C243BF3CF006C1B08 /* DelegateController.m in Sources */,
