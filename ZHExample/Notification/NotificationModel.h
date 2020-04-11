@@ -1,8 +1,8 @@
 //
-//  BlockM.h
+//  NotificationModel.h
 //  ZHExample
 //
-//  Created by Zheng on 2020/4/5.
+//  Created by Zheng on 2020/4/11.
 //  Copyright © 2020 Zheng. All rights reserved.
 //
 
@@ -10,8 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BlockM : NSObject
-
+@interface NotificationModel : NSObject
 
 @end
 

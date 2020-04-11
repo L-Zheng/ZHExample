@@ -6,11 +6,11 @@
 //  Copyright © 2020 Zheng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ZHBaseController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NotificationController : UIViewController
+@interface NotificationController : ZHBaseController
 
 @end
 

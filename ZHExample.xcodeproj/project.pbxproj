@@ -24,6 +24,9 @@
 		0FBE4A4F243BF3E2006C1B08 /* KVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A4E243BF3E2006C1B08 /* KVOController.m */; };
 		0FBE4A52243BF3F5006C1B08 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A51243BF3F5006C1B08 /* NotificationController.m */; };
 		0FBE4A55243BF410006C1B08 /* DelegateM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A54243BF410006C1B08 /* DelegateM.m */; };
+		0FBE4A582441A3A8006C1B08 /* CategotyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A572441A3A8006C1B08 /* CategotyController.m */; };
+		0FBE4A5B2441A42E006C1B08 /* ZHBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A5A2441A42E006C1B08 /* ZHBaseController.m */; };
+		0FBE4A5E2441B53B006C1B08 /* NotificationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBE4A5D2441B53B006C1B08 /* NotificationModel.m */; };
 		85365FCC243DBD35001FE9CB /* MultiParamsFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 85365FCB243DBD35001FE9CB /* MultiParamsFunc.m */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +82,12 @@
 		0FBE4A51243BF3F5006C1B08 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
 		0FBE4A53243BF410006C1B08 /* DelegateM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DelegateM.h; sourceTree = "<group>"; };
 		0FBE4A54243BF410006C1B08 /* DelegateM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateM.m; sourceTree = "<group>"; };
+		0FBE4A562441A3A8006C1B08 /* CategotyController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategotyController.h; sourceTree = "<group>"; };
+		0FBE4A572441A3A8006C1B08 /* CategotyController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategotyController.m; sourceTree = "<group>"; };
+		0FBE4A592441A42E006C1B08 /* ZHBaseController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHBaseController.h; sourceTree = "<group>"; };
+		0FBE4A5A2441A42E006C1B08 /* ZHBaseController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHBaseController.m; sourceTree = "<group>"; };
+		0FBE4A5C2441B53B006C1B08 /* NotificationModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationModel.h; sourceTree = "<group>"; };
+		0FBE4A5D2441B53B006C1B08 /* NotificationModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationModel.m; sourceTree = "<group>"; };
 		85365FCA243DBD35001FE9CB /* MultiParamsFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiParamsFunc.h; sourceTree = "<group>"; };
 		85365FCB243DBD35001FE9CB /* MultiParamsFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiParamsFunc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,12 +146,14 @@
 				0FBE4A0124383108006C1B08 /* SceneDelegate.m */,
 				0FBE4A0324383108006C1B08 /* ViewController.h */,
 				0FBE4A0424383108006C1B08 /* ViewController.m */,
-				85365FC9243DBD17001FE9CB /* MultiParamsFunc */,
-				0FBE4A322438350E006C1B08 /* Event&Reponse-Chain */,
+				0FBE4A592441A42E006C1B08 /* ZHBaseController.h */,
+				0FBE4A5A2441A42E006C1B08 /* ZHBaseController.m */,
 				0FBE4A3C2439733E006C1B08 /* Categoty&Extension */,
 				0FBE4A47243BF394006C1B08 /* Delegate */,
 				0FBE4A40243A07DB006C1B08 /* Block */,
 				0FBE4A48243BF39B006C1B08 /* Notification */,
+				85365FC9243DBD17001FE9CB /* MultiParamsFunc */,
+				0FBE4A322438350E006C1B08 /* Event&Reponse-Chain */,
 				0FBE4A49243BF3A4006C1B08 /* KVO */,
 				0FBE4A0624383108006C1B08 /* Main.storyboard */,
 				0FBE4A0924383109006C1B08 /* Assets.xcassets */,
@@ -183,6 +194,8 @@
 		0FBE4A3C2439733E006C1B08 /* Categoty&Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0FBE4A562441A3A8006C1B08 /* CategotyController.h */,
+				0FBE4A572441A3A8006C1B08 /* CategotyController.m */,
 				0FBE4A3D24397368006C1B08 /* CategotyModel.h */,
 				0FBE4A3E24397368006C1B08 /* CategotyModel.m */,
 			);
@@ -216,6 +229,8 @@
 			children = (
 				0FBE4A50243BF3F5006C1B08 /* NotificationController.h */,
 				0FBE4A51243BF3F5006C1B08 /* NotificationController.m */,
+				0FBE4A5C2441B53B006C1B08 /* NotificationModel.h */,
+				0FBE4A5D2441B53B006C1B08 /* NotificationModel.m */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -373,6 +388,9 @@
 				85365FCC243DBD35001FE9CB /* MultiParamsFunc.m in Sources */,
 				0FBE4A4F243BF3E2006C1B08 /* KVOController.m in Sources */,
 				0FBE4A3824387B13006C1B08 /* EventResponseController.m in Sources */,
+				0FBE4A5B2441A42E006C1B08 /* ZHBaseController.m in Sources */,
+				0FBE4A5E2441B53B006C1B08 /* NotificationModel.m in Sources */,
+				0FBE4A582441A3A8006C1B08 /* CategotyController.m in Sources */,
 				0FBE4A4C243BF3CF006C1B08 /* DelegateController.m in Sources */,
 				0FBE4A46243ABAC6006C1B08 /* BlockController.m in Sources */,
 				0FBE4A55243BF410006C1B08 /* DelegateM.m in Sources */,

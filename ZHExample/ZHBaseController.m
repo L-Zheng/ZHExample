@@ -1,24 +1,22 @@
 //
-//  BlockController.m
+//  ZHBaseController.m
 //  ZHExample
 //
-//  Created by Zheng on 2020/4/6.
+//  Created by Zheng on 2020/4/11.
 //  Copyright © 2020 Zheng. All rights reserved.
 //
 
-#import "BlockController.h"
-#import "BlockM.h"
+#import "ZHBaseController.h"
 
-@interface BlockController ()
+@interface ZHBaseController ()
 
 @end
 
-@implementation BlockController
+@implementation ZHBaseController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    BlockM *b = [[BlockM alloc] init];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 /*

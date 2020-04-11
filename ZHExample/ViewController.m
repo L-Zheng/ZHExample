@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "EventResponseController.h"
+#import "CategotyController.h"
+#import "DelegateController.h"
 #import "BlockController.h"
+#import "NotificationController.h"
+#import "EventResponseController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic,strong) UITableView *tableView;
@@ -33,15 +36,33 @@
 - (NSArray *)configData{
     return @[
         @{
-            @"title" : @"事件传递、响应链条",
+            @"title" : @"Categoty、Extension",
             @"block" : ^UIViewController *{
-                return [[EventResponseController alloc] init];
+                return [[CategotyController alloc] init];
+            }
+        },
+        @{
+            @"title" : @"Delegate",
+            @"block" : ^UIViewController *{
+                return [[DelegateController alloc] init];
             }
         },
         @{
             @"title" : @"Block",
             @"block" : ^UIViewController *{
                 return [[BlockController alloc] init];
+            }
+        },
+        @{
+            @"title" : @"Notification",
+            @"block" : ^UIViewController *{
+                return [[NotificationController alloc] init];
+            }
+        },
+        @{
+            @"title" : @"事件传递、响应链条",
+            @"block" : ^UIViewController *{
+                return [[EventResponseController alloc] init];
             }
         }
     ];

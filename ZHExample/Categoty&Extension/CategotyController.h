@@ -1,8 +1,8 @@
 //
-//  DelegateController.h
+//  CategotyController.h
 //  ZHExample
 //
-//  Created by Zheng on 2020/4/7.
+//  Created by Zheng on 2020/4/11.
 //  Copyright © 2020 Zheng. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DelegateController : ZHBaseController
+@interface CategotyController : ZHBaseController
 
 @end
 
