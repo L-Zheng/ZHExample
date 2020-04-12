@@ -1,16 +1,16 @@
 //
-//  KVOController.h
+//  KVOModel.h
 //  ZHExample
 //
-//  Created by Zheng on 2020/4/7.
+//  Created by Zheng on 2020/4/12.
 //  Copyright © 2020 Zheng. All rights reserved.
 //
 
-#import "ZHBaseController.h"
+#import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface KVOController : ZHBaseController
+@interface KVOModel : NSObject
 
 @end
 

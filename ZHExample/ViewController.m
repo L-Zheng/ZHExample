@@ -11,6 +11,7 @@
 #import "DelegateController.h"
 #import "BlockController.h"
 #import "NotificationController.h"
+#import "KVOController.h"
 #import "EventResponseController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -57,6 +58,12 @@
             @"title" : @"Notification",
             @"block" : ^UIViewController *{
                 return [[NotificationController alloc] init];
+            }
+        },
+        @{
+            @"title" : @"KVO",
+            @"block" : ^UIViewController *{
+                return [[KVOController alloc] init];
             }
         },
         @{
