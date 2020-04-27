@@ -43,6 +43,7 @@
         // 初始化变量刚定义的va_list变量，这个宏的第二个参数是第一个可变参数的前一个参数，是一个固定的参数
         va_start(args, firstArg);
         // 遍历全部参数 va_arg返回可变的参数(a_arg的第二个参数是你要返回的参数的类型)
+        //依次获取参数值，直到遇见nil【参数format必须以nil结尾 否则崩溃】
         while ((arg = va_arg(args, id))) {
             NSLog(@"%@", arg);
         }
@@ -59,6 +60,7 @@
         va_list args;
         id arg;
         va_start(args, a1);
+        //依次获取参数值，直到遇见nil【参数format必须以nil结尾 否则崩溃】
         while ((arg = va_arg(args, id))) {
             NSLog(@"%@", arg);
         }
@@ -89,7 +91,7 @@
 //    [argObjs addObject:format];
     
     va_start(args, format);
-    //依次获取参数值，直到遇见nil【参数必须以nil结尾 否则崩溃】
+    //依次获取参数值，直到遇见nil【参数format必须以nil结尾 否则崩溃】
     while ((arg = va_arg(args, id))) {
         [argObjs addObject:arg];
     }
@@ -99,7 +101,7 @@
 + (void)filterLog:(NSArray *)params format:(NSString *)format, ...{
     va_list args;
     va_start(args, format);
-    //参数不能以nil结尾
+    //参数format不能以nil结尾
     NSLogv(format, args);
     va_end(args);
 }

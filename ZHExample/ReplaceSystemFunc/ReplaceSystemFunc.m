@@ -27,20 +27,33 @@ int new_printf(const char * __restrict format, ...) {
 }
 static void (*original_log)(NSString *format, ...);
 void new_log(NSString *format, ...) {
+    if (!format || [format isEqual:[NSNull null]]) {
+        return;
+    }
+    
     va_list args;
     
     //过滤
     BOOL isFilter = YES;
     if (isFilter) {
-        va_start(args, format);
-        NSString *first = va_arg(args, id);
-        if (![first isKindOfClass:[NSString class]] ||
-            first.length == 0 ||
-            ![first isEqualToString:myLogFlag]) {
-            va_end(args);
-            return;
+            va_start(args, format);
+            NSString *pre = [[NSString alloc] initWithFormat:format arguments:args];
+            if (!pre ||
+                ![pre isKindOfClass:[NSString class]] ||
+                pre.length == 0 ||
+                ![pre hasPrefix:myLogFlag]) {
+                va_end(args);
+                return;
+            }
+    //        NSString __unsafe_unretained *first = va_arg(args, id);;
+    //        if (!first ||
+    //            ![first isKindOfClass:[NSString class]] ||
+    //            first.length == 0 ||
+    //            ![first isEqualToString:myLogFlag]) {
+    //            va_end(args);
+    //            return;
+    //        }
         }
-    }
     
     va_start(args, format);
     NSLogv(format, args);
@@ -58,11 +71,13 @@ int main(int argc, char * argv[]) {
         rebind_symbols((struct rebinding[1]){strlen_rebinding2}, 1);
         
         
-        
-        NSLog(@"--------------------");
-        NSString *dd = nil;
-        NSLog(@"%@%@%@", @{@"ddd": @[@"444", @"111"]},@"sss", @"rrr");
-        NSLog(@"%@%@%@%@", @"jslog", @{@"ddd": @[@"444", @"111"]},@"sss", nil);
+        NSLog(@"-----");
+        NSLog(@"-----%@%@", [NSNull null], nil);
+        NSLog(@"-----%@%@", nil, nil);
+        NSLog(@"-----%@%@%@", nil, @"eeee", nil);
+        NSLog(@"-----%@%@%@", nil, [NSNull null], nil);
+        NSLog([NSNull null]);
+        NSLog(nil);
         printf("%s%s", "sss", "rrr");
         printf("%s%s", "jslog", "sss");
         
