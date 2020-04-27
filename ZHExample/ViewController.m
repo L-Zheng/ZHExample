@@ -12,6 +12,7 @@
 #import "BlockController.h"
 #import "NotificationController.h"
 #import "KVOController.h"
+#import "RunLoopController.h"
 #import "EventResponseController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -64,6 +65,12 @@
             @"title" : @"KVO",
             @"block" : ^UIViewController *{
                 return [[KVOController alloc] init];
+            }
+        },
+        @{
+            @"title" : @"RunLoop",
+            @"block" : ^UIViewController *{
+                return [[RunLoopController alloc] init];
             }
         },
         @{

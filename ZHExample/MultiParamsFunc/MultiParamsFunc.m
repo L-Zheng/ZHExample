@@ -19,6 +19,8 @@
     return self;
 }
 
+#pragma mark - 方法多参数
+
 /**
  va_list：用来保存宏 va_start 、va_arg 和 va_end 所需信息的一种类型。为了访问变长参数列表中的参数，必须声明 va_list 类型的一个对象。
 
@@ -48,6 +50,9 @@
         va_end(args);
     }
 }
+
+#pragma mark - block多参数
+
 - (void)test{
     [self testBlock:^(NSString *a1, ...) {
         NSLog(@"%@", a1);
@@ -62,6 +67,41 @@
 }
 - (void)testBlock:(void (^) (NSString *a1, ...))block{
     block(@"sfd", @{}, @[], nil);
+}
+
+#pragma mark - 宏定义 多参数
+
+#ifdef __OBJC__
+
+#ifdef DEBUG
+#define NSLog(fmt, ...)          \
+[MultiParamsFunc filterLog:[MultiParamsFunc filterLogParams:(fmt), ## __VA_ARGS__, nil] format:(fmt), ## __VA_ARGS__];
+//#define NSLog(fmt, ...) NSLog((@"%s [Line %d] "fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#endif
+
+#endif
+
++ (NSArray *)filterLogParams:(NSString *)format, ...{
+    if (!format) return @[];
+    va_list args;
+    id arg;
+    NSMutableArray *argObjs = [@[] mutableCopy];
+//    [argObjs addObject:format];
+    
+    va_start(args, format);
+    //依次获取参数值，直到遇见nil【参数必须以nil结尾 否则崩溃】
+    while ((arg = va_arg(args, id))) {
+        [argObjs addObject:arg];
+    }
+    va_end(args);
+    return argObjs;
+}
++ (void)filterLog:(NSArray *)params format:(NSString *)format, ...{
+    va_list args;
+    va_start(args, format);
+    //参数不能以nil结尾
+    NSLogv(format, args);
+    va_end(args);
 }
 
 @end
