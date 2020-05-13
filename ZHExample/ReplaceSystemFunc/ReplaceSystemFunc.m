@@ -8,7 +8,7 @@
 
 #import "ReplaceSystemFunc.h"
 #import <UIKit/UIKit.h>
-#import "fishhook.h"
+#import <fishhook/fishhook.h>
 
 @implementation ReplaceSystemFunc
 
