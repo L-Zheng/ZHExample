@@ -17,7 +17,7 @@ typedef void(^ZHKVOBlock)(id object, NSString *key, id oldValue, id newValue);
 @interface NSObject (ZHKVO)
 
 /**
- 不能识别 首字母大写的属性，因为有setter方法转换成propertyName时 统一使用了转成了小写，待优化。
+ ⚠️⚠️不能识别 首字母大写的属性，因为有setter方法转换成propertyName时 统一使用了转成了小写，待优化。
  当object添加了系统的KVO，不能再调用此方法 否则会crash
  */
 - (void)zh_addObserver:(NSObject *)observer
